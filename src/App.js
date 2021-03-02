@@ -219,7 +219,7 @@ function App() {
                   </table>
                 </div>
                 <div className="col right">
-         {showRoute?<Map lat={getRoutes[getRoutes.length-2].latitude} mapwidth={mapwidth} long={getRoutes[getRoutes.length-2].longitude}  lat1={getRoutes[getRoutes.length-1].latitude} long1={getRoutes[getRoutes.length-1].longitude}></Map>:<Map1 lat={getRoutes[getRoutes.length-2]?.latitude}  mapwidth={mapwidth} long={getRoutes[getRoutes.length-2]?.longitude}  lat1={getRoutes[getRoutes.length-1]?.latitude} long1={getRoutes[getRoutes.length-1]?.longitude}></Map1>}
+         {showRoute && getRoutes.length>=2?<Map lat={getRoutes[getRoutes.length-2].latitude} mapwidth={mapwidth} long={getRoutes[getRoutes.length-2].longitude}  lat1={getRoutes[getRoutes.length-1].latitude} long1={getRoutes[getRoutes.length-1].longitude}></Map>:<Map1 lat={getRoutes[getRoutes.length-2]?.latitude}  mapwidth={mapwidth} long={getRoutes[getRoutes.length-2]?.longitude}  lat1={getRoutes[getRoutes.length-1]?.latitude} long1={getRoutes[getRoutes.length-1]?.longitude}></Map1>}
         
         </div>
         <button className={disableButton?"route1":"route"} disabled={disableButton} onClick={getRouteOnMap}>Show Route</button>
